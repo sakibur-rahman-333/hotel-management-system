@@ -10,7 +10,6 @@ const mapStateToProps = (state) => {
 
 class Header extends Component {
   render() {
-    console.log(this.props.sample);
     return <Navbar />;
   }
 }

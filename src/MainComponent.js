@@ -1,25 +1,44 @@
+import { BrowserRouter, Route } from 'react-router-dom';
+import AllTimeService from './pages/all-time-servie/AllTimeService';
 import Body from './components/body/Body';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
+import InternetService from './pages/internet-service/InternetService';
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import SampleOne from './pages/SampleOne';
-import SampleTwo from './pages/SampleTwo';
-import SampleThree from './pages/SampleThree';
-import SampleFour from './pages/SampleFour';
-import Signin from './pages/Signin';
+import Signin from './pages/signin/Signin';
+import SwimmingPool from './pages/swimming-pool/SwimmingPool';
+import All from './pages/all/All';
+import Signup from './pages/signup/Signup';
+import myStore from './redux/Store';
 
 class MainComponent extends Component {
+  componentDidMount() {
+    const successMail = localStorage.getItem('email');
+    if (successMail !== null) {
+      myStore.dispatch({
+        type: 'AUTH_SUCCESS',
+        value: successMail,
+      });
+    }
+  }
   render() {
     return (
       <BrowserRouter>
         <Header />
-        <Route exact path='/' render={() => <SampleOne />} />
-        <Route exact path='/sample-one' render={() => <SampleOne />} />
-        <Route exact path='/sample-two' render={() => <SampleTwo />} />
-        <Route exact path='/sample-three' render={() => <SampleThree />} />
-        <Route exact path='/sample-four' render={() => <SampleFour />} />
+        <Route exact path='/' render={() => <All />} />
+        <Route
+          exact
+          path='/all-time-service'
+          render={() => <AllTimeService />}
+        />
+        <Route
+          exact
+          path='/internet-service'
+          render={() => <InternetService />}
+        />
+        <Route exact path='/swimming-pool' render={() => <SwimmingPool />} />
         <Route exact path='/signin' component={Signin} />
+        <Route exact path='/signup' component={Signup} />
         <Body />
         <Footer />
       </BrowserRouter>

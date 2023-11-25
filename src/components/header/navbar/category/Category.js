@@ -18,16 +18,16 @@ function Select({ direction }) {
         <DropdownToggle caret>Category</DropdownToggle>
         <DropdownMenu>
           <DropdownItem>
-            <Link to='/'>Sample One</Link>
+            <Link to='/'>All rooms</Link>
           </DropdownItem>
           <DropdownItem>
-            <Link to='/sample-two'>Sample Two</Link>
+            <Link to='/all-time-service'>All Time Service</Link>
           </DropdownItem>
           <DropdownItem>
-            <Link to='/sample-three'>Sample Three</Link>
+            <Link to='/internet-service'>Internet Service</Link>
           </DropdownItem>
           <DropdownItem>
-            <Link to='/sample-four'>Sample Four</Link>
+            <Link to='/swimming-pool'>Swimming Pool</Link>
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>

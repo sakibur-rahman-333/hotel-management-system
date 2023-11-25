@@ -1,0 +1,17 @@
+.showRooms {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.image {
+  width: auto;
+  height: 350px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.modal-image {
+  width: 455px;
+  height: 300px;
+}

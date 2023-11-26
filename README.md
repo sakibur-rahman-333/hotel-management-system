@@ -1,4 +1,4 @@
-# Photo Gallery Project
+# Hotel Management Project
 
 ## Server running process
 

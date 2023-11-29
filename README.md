@@ -6,9 +6,9 @@
 
 2: Open Database folder.
 
-3: Open command prompt and type `npm install json-server -g`
+3: Download [db.json](https://drive.google.com/file/d/1w-OzJ7qGjOVlLsL308NlOQ8mW2ocy2-O/view?usp=drive_link) and copy into the Database folder.
 
-4: Download [db.json](https://drive.google.com/file/d/1w-OzJ7qGjOVlLsL308NlOQ8mW2ocy2-O/view?usp=drive_link) and copy into the Database folder.
+4: Open command prompt and type `npm install json-server -g`
 
 5: Open terminal and write `json-server db.json --watch -p 3001`.
 
